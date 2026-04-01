@@ -35,11 +35,11 @@ resource "aws_security_group" "wide_open" {
 #   })
 # }
 
-resource "aws_instance" "no_imdsv2" {
-  ami           = "ami-0c55b159cbfafe1f0"
-  instance_type = "t2.micro"
+# resource "aws_instance" "no_imdsv2" {
+#   ami           = "ami-0c55b159cbfafe1f0"
+#   instance_type = "t2.micro"
 
-  metadata_options {
-    http_tokens = "optional"
-  }
-}
+#   metadata_options {
+#     http_tokens = "optional"
+#   }
+# }
