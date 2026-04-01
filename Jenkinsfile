@@ -18,7 +18,7 @@ pipeline {
         // even if snyk-linux iac fails, we'll keep going ( || true)
         // we do this because the monitor will use the actual plugin instead of the cli within the plugin
         // we have to set the directory because like jenkins, the snyk plugin will run in the root of the repo, but our terraform code is in week29/terraform
-        /*stage('Snyk IaC Scan Test') {
+        stage('Snyk IaC Scan Test') {
             steps {
                 withCredentials([string(credentialsId: 'snyk-api-token-string', variable: 'SNYK_TOKEN')]) {
                     sh '''
@@ -28,7 +28,7 @@ pipeline {
                     '''
                 }
             }
-        }*/
+        }
 
 
         
